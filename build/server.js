@@ -10,6 +10,9 @@ var http_1 = __importDefault(require("http"));
 var socket_io_1 = require("socket.io");
 var app = (0, express_1.default)();
 app.use((0, cors_1.default)());
+app.get("/", function (req, res) {
+    res.status(200).json('Server running');
+});
 //create server with http
 var serverHttp = http_1.default.createServer(app);
 // config of socker server

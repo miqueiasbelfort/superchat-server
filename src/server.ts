@@ -17,6 +17,10 @@ type Data = {
 
 app.use(cors())
 
+app.get("/", (req: express.Request, res: express.Response) => {
+    res.status(200).json('Server running')
+})
+
 //create server with http
 const serverHttp = http.createServer(app)
 
