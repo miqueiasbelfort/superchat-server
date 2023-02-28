@@ -27,7 +27,7 @@ const serverHttp = http.createServer(app)
 // config of socker server
 const io = new Server(serverHttp, {
     cors: {
-        origin: 'http://localhost:5173',
+        origin: 'https://superchat-react-ts.netlify.app',
         methods: ["GET", "POST"]
     }
 })
