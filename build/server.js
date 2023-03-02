@@ -13,6 +13,14 @@ app.use((0, cors_1.default)());
 app.get("/", function (req, res) {
     res.status(200).json('Server running');
 });
+app.post('/active', function (req, res) {
+    var _a = req.body, room = _a.room, username = _a.username;
+    res.status(200).json({
+        msg: "Server actived",
+        room: room,
+        username: username
+    });
+});
 //create server with http
 var serverHttp = http_1.default.createServer(app);
 // config of socker server
