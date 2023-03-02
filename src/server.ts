@@ -23,9 +23,7 @@ app.get("/", (req: express.Request, res: express.Response) => {
 app.post('/active', (req: express.Request, res: express.Response) => {
     const {room, username} = req.body
     res.status(200).json({
-        msg: "Server actived",
-        room,
-        username
+        msg: "Server actived"
     })
 })
 
