@@ -20,6 +20,14 @@ app.use(cors())
 app.get("/", (req: express.Request, res: express.Response) => {
     res.status(200).json('Server running')
 })
+app.post('/active', (req: express.Request, res: express.Response) => {
+    const {room, username} = req.body
+    res.status(200).json({
+        msg: "Server actived",
+        room,
+        username
+    })
+})
 
 //create server with http
 const serverHttp = http.createServer(app)
