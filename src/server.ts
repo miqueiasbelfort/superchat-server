@@ -1,6 +1,6 @@
 import 'dotenv/config'
 
-import express from 'express'
+import express, {Response} from 'express'
 import cors from 'cors'
 import http from 'http'
 import { Server } from 'socket.io'
@@ -20,8 +20,7 @@ app.use(cors())
 app.get("/", (req: express.Request, res: express.Response) => {
     res.status(200).json('Server running')
 })
-app.post('/active', (req: express.Request, res: express.Response) => {
-    const {room, username} = req.body
+app.post('/active', (req: express.Request, res: Response) => {
     res.status(200).json({
         msg: "Server actived"
     })

@@ -14,7 +14,6 @@ app.get("/", function (req, res) {
     res.status(200).json('Server running');
 });
 app.post('/active', function (req, res) {
-    var _a = req.body, room = _a.room, username = _a.username;
     res.status(200).json({
         msg: "Server actived"
     });
